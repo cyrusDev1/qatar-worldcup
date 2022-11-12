@@ -27,12 +27,15 @@
                     </div>
                 </div>
             </div>
+           
             <div v-else class="chargement">
                 <div class="d-flex justify-content-center align-items-center">
                     <div class="spinner-border" role="status">
                         <span class="sr-only">Loading...</span>
                     </div>
                 </div>
+            </div>
+            <div>
             </div>
         </div>
     </div>
@@ -41,6 +44,7 @@
 </template>
 <script>
 import Header from "../components/Header.vue";
+import flags from '../store'
 export default{
     components:{
         Header,
@@ -48,6 +52,11 @@ export default{
     data(){
         return {
             loading: false,
+        }
+    },
+    methods:{
+        getFlag: (code) => {
+            return flags[code]
         }
     }
 }

@@ -6,7 +6,7 @@
         </div>
         <div>
             <div>
-    <tabs>
+    <!--tabs>
         <tab name="First tab">
             First tab content
         </tab>
@@ -16,7 +16,7 @@
         <tab name="Third tab">
             Third tab content
         </tab>
-    </tabs>
+    </tabs-->
 </div>
 </div>
         <div class="text">
