@@ -1,0 +1,119 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #8d1b3d;
+}
+.vr-color{
+    color: #8d1b3d;
+}
+.vr-back{
+    background-color: #8d1b3d;
+}
+#app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #2c3e50;
+}
+
+
+#menu .text {
+    margin-top: 3vh;
+}
+
+#menu .text p {
+    color: white;
+    font-size: 18px;
+}
+
+#menu .button button {
+    color: white;
+}
+
+#menu .menu {
+    background-color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin: 0;
+    border-top: 3px solid #CCCCCC;
+}
+
+#menu .menu a {
+    color: #8d1b3d;
+    font-size: 25px;
+}
+
+#menu .menu .col-3 span {
+    font-size: 10px;
+    text-align: center;
+    display: block;
+
+}
+
+
+#menu .active {
+    color: black;
+}
+
+#welcome{
+    text-align: center;
+}
+#welcome .row img{
+    margin-top: 45px;
+}
+#welcome .text{
+    margin-top: 3vh;
+}
+#welcome .text p{
+    color: white;
+    font-size: 18px;
+}
+#welcome .go{
+    width: 40%;
+}
+
+ 
+#today .route{
+    font-size: 15px;
+    font-weight: bolder;
+    color: white;
+}
+
+
+#liste{
+    margin: 0;
+    margin-top: 15vh;
+     color: white;
+    text-align: center;
+    padding-top: 10px;
+    margin-bottom: 20vh;
+}
+
+#liste span{
+  font-size: 18p;;
+}
+
+
+#liste .container .row .col-12{
+    background-color: #360000;
+    margin-bottom: 10px;
+
+}
+.team{
+    display: block;
+}
+.score{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
