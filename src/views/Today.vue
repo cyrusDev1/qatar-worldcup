@@ -25,6 +25,7 @@
                         </div>
                         <span  class="mt-2">Phase de groupes - Groupe P</span>
                     </div>
+                    {{ MatchToday }}
                 </div>
             </div>
            
@@ -44,20 +45,38 @@
 </template>
 <script>
 import Header from "../components/Header.vue";
-import flags from '../store'
+import flags from '../store/flag.js'
+import req from '../store/'
+import { datetimeformat } from "../utils/index.js"
+
 export default{
     components:{
         Header,
     },
     data(){
         return {
-            loading: false,
+            loading: true,
+            MatchToday: []
         }
     },
-    methods:{
-        getFlag: (code) => {
+
+    created(){
+        this.fetchMatchToday()
+    },
+
+    methods: {
+        getFlag: function(code){
             return flags[code]
-        }
+        },
+        fetchMatchToday: function(){
+            req.get('/matches')
+            .then(response => {
+                this.MatchToday = response.data
+                datetimeformat(this.MatchToday)
+                this.loading = false
+            });
+        } 
+        
     }
 }
 </script>
