@@ -3,32 +3,34 @@
     <div id="liste">
         <div class="container">
             <div v-if="!loading" class="row">
-                <span class="mb-4">12 Novembre 2022</span>
-                <div  class="col-12 pt-4 pb-4">
-                    <span>12 00</span>
+                <span class="mb-4">{{ MatchToday[0].date }}</span>
+                <div v-for="match in MatchToday"  class="col-12 pt-4 pb-4">
+                    <span>{{ match.time }}</span>
                     <div class="row">
                         <div class="col-4">
-                            <img height="50" width="60">
-                            <span class="d-block mt-1">Argentine</span>
+                            <img :src="getFlag(match.home_team.country)" >
+                            <span class="d-block mt-1">{{ match.home_team.name }}</span>
                         </div>
                         <div class="col-4">
-                            <div class="score">7 - 1
-                                   
+                            <div class="score">
+                                <span v-if="match.status != 'future_scheduled'" class="d-block">{{ match.home_team.goals }} - {{ match.away_team.goals }}</span>
+                                <span v-else class="d-block"> vs </span>
                             </div>
-                             <span class="d-block">Terminé</span>
-                             
-
+                            <span v-if="match.status != 'future_scheduled'" class="d-block">{{ match.status }}</span>
                         </div>
                         <div class="col-4">
-                            <img height="50" width="60" >
-                            <span class="d-block mt-1">Brazil</span>
+                            <img :src="getFlag(match.away_team.country)" >
+                            <span class="d-block mt-1">{{ match.away_team.name }}</span>
                         </div>
-                        <span  class="mt-2">Phase de groupes - Groupe P</span>
+                        <span class="mt-2">{{ match.venue }}</span>
+
+                        <span v-if="match.stage_name == 'First stage'"  class="mt-1"><i>Phase de groupes - Groupe {{ match.group }}</i></span>
+                        <span v-else class="mt-1"><i>{{ match.stage_name }}</i></span>
+
+
                     </div>
-                    {{ MatchToday }}
                 </div>
             </div>
-           
             <div v-else class="chargement">
                 <div class="d-flex justify-content-center align-items-center">
                     <div class="spinner-border" role="status">
@@ -40,14 +42,13 @@
             </div>
         </div>
     </div>
-
-
 </template>
+
 <script>
 import Header from "../components/Header.vue";
 import flags from '../store/flag.js'
 import req from '../store/'
-import { datetimeformat } from "../utils/index.js"
+import { datetimeformat, today, addGroup } from "../utils/index.js"
 
 export default{
     components:{
@@ -69,10 +70,11 @@ export default{
             return flags[code]
         },
         fetchMatchToday: function(){
-            req.get('/matches')
+            req.get(today)
             .then(response => {
                 this.MatchToday = response.data
                 datetimeformat(this.MatchToday)
+                addGroup(this.MatchToday)
                 this.loading = false
             });
         } 

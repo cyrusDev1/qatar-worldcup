@@ -10,7 +10,7 @@
                     <span class="desc">Calendrier</span>
                 </div>
                 <div class="col-3">
-                    <router-link to="classement"><i class="fa fa-list"></i></router-link>
+                    <router-link to="standing"><i class="fa fa-list"></i></router-link>
                     <span class="desc">Classement</span>
                 </div>
                 <div class="col-3">
