@@ -34,9 +34,6 @@
                     </tbody>
                 </table>
             </div>
-            
-            
-
         </div>
         <div v-else class="chargement">
                 <div class="d-flex justify-content-center align-items-center">
@@ -97,12 +94,12 @@ export default{
 .classement .table .name{
     white-space: nowrap;
     min-width: 155px;
- }
- .classement .table .name span{
+}
+.classement .table .name span{
     margin-left: 5px;
- }
+}
  
- .center{
+.center{
      text-align: center;
- }
+}
 </style>

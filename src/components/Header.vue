@@ -1,6 +1,6 @@
 <template>
    <div class="container" id="today">
-            <header class="py-4">
+            <header class="py-5">
                 <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
                     <div class="container">
                         <router-link to="/" class="navbar-brand text-white text-uppercase fs-1" href="#">

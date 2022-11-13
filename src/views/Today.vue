@@ -19,15 +19,13 @@
                             <span v-if="match.status != 'future_scheduled'" class="d-block">{{ match.status }}</span>
                         </div>
                         <div class="col-4">
-                            <img :src="getFlag(match.away_team.country)" >
+                            <img :src="getFlag(match.away_team.country)">
                             <span class="d-block mt-1">{{ match.away_team.name }}</span>
                         </div>
                         <span class="mt-2">{{ match.venue }}</span>
 
                         <span v-if="match.stage_name == 'First stage'"  class="mt-1"><i>Phase de groupes - Groupe {{ match.group }}</i></span>
                         <span v-else class="mt-1"><i>{{ match.stage_name }}</i></span>
-
-
                     </div>
                 </div>
             </div>
@@ -87,8 +85,7 @@ export default{
 
 #liste{
     margin: 0;
-    margin-top: 15vh;
-     color: white;
+      color: white;
     text-align: center;
     padding-top: 10px;
     margin-bottom: 20vh;

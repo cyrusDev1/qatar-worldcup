@@ -30,3 +30,5 @@ const dateFrench = date => {
 
 export const today = "/matches?start_date=2022-11-21&end_date=2022-11-21" //for test
 export const standing = "/teams/"
+export const calendar = "/matches/"
+
