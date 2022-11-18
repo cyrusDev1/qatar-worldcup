@@ -71,10 +71,11 @@ export default{
             return flags[code]
         },
         fetchStanding: function(){
+            const that = this
             req.get(standing)
-            .then(response => {
-                this.Standing = response.data.groups
-                this.loading = false
+            .then(function(response){
+                that.Standing = response.data.groups
+                that.loading = false
             });
         }
     }

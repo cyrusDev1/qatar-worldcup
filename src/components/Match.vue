@@ -7,16 +7,16 @@
             <div>
                 <div class="home">
                     <span v-if="match.stage_name == 'Round of 16'">{{ match.home_team.country }}</span>
-                    <span v-else >{{ match.away_team.name == 'To Be Determined' ? "TBD" : match.away_team.name }}</span>
+                    <span v-else >{{ match.home_team.name == 'To Be Determined' ? "TBD" : match.home_team.name }}</span>
                 </div>
-                <img v-if="match.status == 'future_scheduled'" :src="getFlag(match.home_team.country)" class="home-flag">
+                <img v-if="match.status == 'future_scheduled'" :src="getFlag(match.home_team.country)" class="home-flag" width="20" height="15">
             </div>
             <div  class="sc">
                 <span v-if="match.status != 'future_scheduled'" class="d-block">{{ match.home_team.goals }} : {{ match.away_team.goals }}</span>
                 <span v-else class="d-block"> vs </span>
             </div>
             <div>
-                <img  v-if="match.status == 'future_scheduled'" :src="getFlag(match.away_team.country)" class="away-flag">
+                <img  v-if="match.status == 'future_scheduled'" :src="getFlag(match.away_team.country)" class="away-flag" width="20" height="15">  
                 <div class="away">
                     <span v-if="match.stage_name == 'Round of 16'" >{{ match.away_team.country }}</span>
                     <span v-else >{{ match.away_team.name == 'To Be Determined' ? "TBD" : match.away_team.name }}</span>

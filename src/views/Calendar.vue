@@ -1,5 +1,5 @@
 <template>
-    <Header msg="Calendrier"></Header><br><br>
+    <Header msg="Calendrier"></Header>
     <div class="container calendar">
         <div v-if="!loading" class="row">
             <div>
@@ -47,8 +47,10 @@
                 </tabs>
 
             </div>
+            
+
         </div>
-        <div v-else class="chargement">
+        <div v-else class="chargement"><br><br><br><br><br><br>
             <div class="d-flex justify-content-center align-items-center">
                 <div class="spinner-border" role="status">
                     <span class="sr-only">Loading...</span>
@@ -69,9 +71,9 @@ import { datetimeformat, calendar, addGroup } from "../utils/index.js"
 
 export default {
     components: {
-        Header,
-        Infobar,
-        Match
+        Header: Header,
+        Infobar: Infobar,
+        Match: Match
     },
     data() {
         return {
@@ -89,19 +91,20 @@ export default {
             return flags[code]
         },
         noSameDate(index){
-            const curr = this.Calendar[index].date
-            const next = this.Calendar[index + 1].date
-            if (curr == next)
+           const curr = this.Calendar[index].date
+            const prev = this.Calendar[index - 1]?.date
+            if (curr == prev)
                 return false
             return true
         },
         fetchCalendar: function () {
+            const that = this
             req.get(calendar)
-                .then(response => {
-                    this.Calendar = response.data
-                    datetimeformat(this.Calendar)
-                    addGroup(this.Calendar)
-                    this.loading = false
+                .then(function(response){
+                    that.Calendar = response.data
+                    datetimeformat(that.Calendar)
+                    addGroup(that.Calendar)
+                    that.loading = false
                 });
         }
     }

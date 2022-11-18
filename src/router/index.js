@@ -1,30 +1,30 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import Home from '../views/Home.vue'
-import Today from '../views/Today.vue'
-import Standing from '../views/Standing.vue'
-import Calendar from '../views/Calendar.vue'
-
+import { createRouter, createWebHashHistory } from 'vue-router';
+import Home from '../views/Home.vue';
+import Today from '../views/Today.vue';
+import Standing from '../views/Standing.vue';
+import Calendar from '../views/Calendar.vue';
 
 const router = createRouter({
-    history: createWebHistory(import.meta.env.BASE_URL),
-    routes: [
+  history: createWebHashHistory(),
+  routes: [
     {
-        path: '/',
-        component: Home
+      path: '/',
+      component: Home
     },
     {
-        path: '/today',
-        component: Today
+      path: '/today',
+      component: Today
     },
     {
-        path: '/standing',
-        component: Standing
+      path: '/standing',
+      component: Standing
     },
     {
-        path: '/calendar',
-        component: Calendar
+      path: '/calendar',
+      component: Calendar
     }
-  ]
-})
+  ],
+  linkActiveClass: 'active-link'
+});
 
-export default router
+export default router;

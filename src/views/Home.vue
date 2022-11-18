@@ -5,25 +5,14 @@
             <img src="../assets/logo.png">
         </div>
         <div>
-            <div>
-    <!--tabs>
-        <tab name="First tab">
-            First tab content
-        </tab>
-        <tab name="Second tab">
-            Second tab content
-        </tab>
-        <tab name="Third tab">
-            Third tab content
-        </tab>
-    </tabs-->
-</div>
 </div>
         <div class="text">
             <p>
                 Retrouvez les rencontres, les scores et les classements de la 
-                coupe du monde Qatar 2022 en temps réel.
+                coupe du monde Qatar 2022 en temps réel. <br>
+                <b>Made by cyrusDev with <i class="fa fa-heart"></i></b>
             </p>
+            
         </div>
     </div>
 </div>
@@ -38,10 +27,14 @@
     text-align: center;
 }
 #welcome .row img{
-    margin-top: 45px;
+    margin-top: 15px;
+    width: 200px;
+    height: 200px;
 }
 #welcome .text{
     margin-top: 3vh;
+    margin-bottom: 18vh;
+
 }
 #welcome .text p{
     color: white;

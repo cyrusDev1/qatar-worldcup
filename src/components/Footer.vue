@@ -1,22 +1,19 @@
 <template>
        <div id="menu">
             <div class="row menu">
-                <div class="col-3">
+                <div class="col-4">
                     <router-link to="today"><i class="fa fa-futbol"></i></router-link>
                     <span class="desc">Aujourd'hui</span>
                 </div>
-                <div class="col-3">
+                <div class="col-4">
                     <router-link to="calendar"><i class="fa fa-calendar"></i></router-link>
                     <span class="desc">Calendrier</span>
                 </div>
-                <div class="col-3">
+                <div class="col-4">
                     <router-link to="standing"><i class="fa fa-list"></i></router-link>
                     <span class="desc">Classement</span>
                 </div>
-                <div class="col-3">
-                    <router-link to="prono"><i class="fa fa-trophy"></i></router-link>
-                    <span class="desc">Pronostic</span>
-                </div>
+                
             </div>
         </div>
 </template>
@@ -79,16 +76,21 @@ body {
     font-size: 25px;
 }
 
-#menu .menu .col-3 span {
-    font-size: 10px;
+#menu .menu .col-4 span {
+    font-size: 12px;
     text-align: center;
     display: block;
 
 }
 
-
-#menu .active {
+#menu .active-link i{
     color: black;
 }
-
+.chargement{
+    color: white;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 </style>

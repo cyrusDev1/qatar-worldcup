@@ -1,7 +1,7 @@
 import groups from "../store/match_group.js"
 
-export function datetimeformat(MatchToday){
-    MatchToday.forEach(element => {
+export function datetimeformat(Tb){
+    Tb.forEach(function(element){
         let datetime = element.datetime
         datetime = datetime.split('T')
         const date_ = datetime[0]
@@ -14,21 +14,28 @@ export function datetimeformat(MatchToday){
 }
 
 
-export function addGroup(MatchToday){
-    MatchToday.forEach(element => {
+export function addGroup(Tb){
+    Tb.forEach(function(element){
         element.group = groups[element.id]
     })
 }
 
-const dateFrench = date => {
-    const day = ['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi', 'Dimanche'];
+const dateFrench = function(date) {
     const month = ['','Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'];
     return `${date[2]} ${month[date[1]]} ${date[0]}`
 }
 
+function nowdate(){
+    const date = new Date();
+    const m = date.getMonth();
+    const j = date.getDate();
+    const y = date.getFullYear();
+    return `${y}-${m}-${j}`
+}
 
+const now_date = nowdate()
 
-export const today = "/matches?start_date=2022-11-21&end_date=2022-11-21" //for test
+export const today = `/matches?start_date=${now_date}&end_date=${now_date}` //for test
 export const standing = "/teams/"
 export const calendar = "/matches/"
 
