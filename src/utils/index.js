@@ -35,7 +35,7 @@ function nowdate(){
 
 const now_date = nowdate()
 
-export const today = "/today" //for test
+export const today = `/matches?start_date=${now_date}&end_date=${now_date}` //for test
 export const standing = "/teams/"
 export const calendar = "/matches/"
 
