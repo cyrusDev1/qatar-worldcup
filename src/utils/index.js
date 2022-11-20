@@ -30,7 +30,7 @@ function nowdate(){
     const m = date.getMonth();
     const j = date.getDate();
     const y = date.getFullYear();
-    return `${y}-${m}-${j}`
+    return `${y}-${m + 1}-${j}`
 }
 
 const now_date = nowdate()

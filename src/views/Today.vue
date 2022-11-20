@@ -73,14 +73,6 @@ export default {
         this.fetchMatchToday()
     },
 
-    mounted(){
-    const date = new Date();
-    const m = date.getMonth();
-    const j = date.getDate();
-    const y = date.getFullYear();
-    console.log(date)
-    },
-
     methods: {
         getFlag: function (code) {
             return flags[code]
