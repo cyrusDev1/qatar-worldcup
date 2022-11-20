@@ -78,7 +78,7 @@ export default {
     const m = date.getMonth();
     const j = date.getDate();
     const y = date.getFullYear();
-    console.log(`${y}-${m}-${j}`)
+    console.log(date)
     },
 
     methods: {
