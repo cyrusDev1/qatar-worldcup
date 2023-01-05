@@ -3,7 +3,7 @@
 ![logo](public/img/logo.png)
 
 ## Peview
-![See app here](qatar-worldcup.netlify.app)
+[See app here](https://qatar-worldcup.netlify.app)
 
 ## Overview
 My web app is a single-page app, coded mainly in VueJs
