@@ -1,4 +1,4 @@
-# qatar-worldcup ~ Find the matches, scores and rankings of the Qatar 2022 world cup in real time.
+# Qatar-worldcup ~ Find the matches, scores and rankings of the Qatar 2022 world cup in real time.
 
 ![logo](public/img/logo.png)
 
@@ -6,20 +6,18 @@
 Here is a preview of our main feature, the swiping through other profiles:
 [See app here](qatar-worldcup.netlify.app)
 
-![swiping](https://miro.medium.com/max/720/1*8GBDj1qrAT6wLg7TlpdldQ.webp)
-
 # Architecture
 
 ## Overview
-My  web app is a single-page app, coded mainly in Javascript and Python.
+My  web app is a single-page app, coded mainly in VueJs
 
 ![infra](public/img/1.png)
 
 ## Technologies
-# VueJs 3
-# Axios
-# Css
-# Boostrap
+- VueJs 3
+- Axios
+- Css
+- Boostrap
 
 ## License
 
