@@ -2,22 +2,20 @@
 
 ![logo](public/img/logo.png)
 
-# Peview
-Here is a preview of our main feature, the swiping through other profiles:
-[See app here](qatar-worldcup.netlify.app)
-
-# Architecture
+## Peview
+![See app here](qatar-worldcup.netlify.app)
 
 ## Overview
-My  web app is a single-page app, coded mainly in VueJs
+My web app is a single-page app, coded mainly in VueJs
 
 ![infra](public/img/1.png)
+![infra](public/img/4.png)
 
 ## Technologies
 - VueJs 3
 - Axios
 - Css
-- Boostrap
+- Bootstrap
 
 ## License
 
